@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tigopesaui/widgets/homecard.dart';
 
 class HeomePage extends StatefulWidget {
   const HeomePage({super.key});
@@ -12,6 +13,7 @@ class _HeomePageState extends State<HeomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
+          backgroundColor: Color.fromARGB(255, 241, 239, 239),
       appBar: AppBar(backgroundColor: Color.fromRGBO(31, 59, 144, 100)),
       body: ListView(
         children: [
@@ -44,35 +46,26 @@ class _HeomePageState extends State<HeomePage> {
             ),
           ),
           Expanded(
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height / 2,
-              child: GridView(
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                  ),
-                  children: [
-                    Card(
-                      child: Center(
-                        child: Text("data"),
-                      ),
-                    ),
-                     Card(
-                      child: Center(
-                        child: Text("data"),
-                      ),
-                    ),
-                     Card(
-                      child: Center(
-                        child: Text("data"),
-                      ),
-                    ),
-                     Card(
-                      child: Center(
-                        child: Text("data"),
-                      ),
-                    )
-                  ]),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height / 1.5,
+                child: GridView(
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2, childAspectRatio: 2),
+                    children: [
+                      HomeCard().homeCard("Tume Pesa", Icons.send_to_mobile_rounded),
+                      HomeCard().homeCard("Kulipia Bili", Icons.payments_outlined),
+                      HomeCard().homeCard("Benki", Icons.account_balance_outlined),
+                      HomeCard().homeCard("Kutoa Pesa", Icons.abc),
+                      HomeCard().homeCard("Malipo ya Serikali", Icons.abc),
+                      HomeCard().homeCard("Lipa Kwa Simu", Icons.abc),
+                      HomeCard().homeCard("Duka La Tigo", Icons.abc),
+                      HomeCard().homeCard("Lipa Kwa Simu", Icons.abc),
+                      HomeCard().homeCard("Lipa Kwa Simu", Icons.abc)
+                    ]),
+              ),
             ),
           )
         ],
