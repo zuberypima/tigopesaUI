@@ -1,10 +1,11 @@
 # tigopesaui
 
-A new Flutter project.
+A new Flutter project (Clone of Tigopesa App Ui only).
 
 ## Getting Started
 
 This project is a starting point for a Flutter application.
+Also this project is free for any use, 
 
 A few resources to get you started if this is your first Flutter project:
 
