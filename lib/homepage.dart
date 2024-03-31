@@ -14,8 +14,8 @@ class _HeomePageState extends State<HeomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-          backgroundColor: Color.fromARGB(255, 241, 239, 239),
-      appBar: AppBar(backgroundColor:mainColor),
+      backgroundColor: Color.fromARGB(255, 241, 239, 239),
+      appBar: AppBar(backgroundColor: mainColor),
       body: ListView(
         children: [
           Padding(
@@ -37,9 +37,7 @@ class _HeomePageState extends State<HeomePage> {
                     ),
                     Text(
                       "Angalia Salio",
-                      style: TextStyle(
-                          color: mainColor,
-                          fontSize: 18),
+                      style: TextStyle(color: mainColor, fontSize: 18),
                     )
                   ],
                 ),
@@ -56,15 +54,20 @@ class _HeomePageState extends State<HeomePage> {
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2, childAspectRatio: 2),
                     children: [
-                      HomeCard().homeCard("Tume Pesa", Icons.send_to_mobile_rounded),
-                      HomeCard().homeCard("Kulipia Bili", Icons.payments_outlined),
-                      HomeCard().homeCard("Benki", Icons.account_balance_outlined),
-                      HomeCard().homeCard("Kutoa Pesa", Icons.category_sharp),
-                      HomeCard().homeCard("Malipo ya Serikali", Icons.pages_outlined),
-                      HomeCard().homeCard("Lipa Kwa Simu", Icons.abc),
-                      HomeCard().homeCard("Duka La Tigo", Icons.shopping_cart_checkout_sharp),
-                      HomeCard().homeCard("Lipa Kwa Simu", Icons.abc),
-                      HomeCard().homeCard("Lipa Kwa Simu", Icons.abc)
+                      HomeCard()
+                          .homeCard("Tume Pesa", Icons.send_to_mobile_rounded),
+                      HomeCard()
+                          .homeCard("Kulipia Bili", Icons.payments_outlined),
+                      HomeCard()
+                          .homeCard("Benki", Icons.account_balance_outlined),
+                      HomeCard().homeCard("Kutoa Pesa", Icons.wallet),
+                      HomeCard()
+                          .homeCard("Malipo ya Serikali", Icons.pages_outlined),
+                      HomeCard().homeCard("Lipa Kwa Simu", Icons.paid_outlined),
+                      HomeCard().homeCard(
+                          "Duka La Tigo", Icons.shopping_cart_checkout_sharp),
+                      HomeCard().homeCard("Tuma Nje ya Nchi", Icons.abc),
+                      HomeCard().homeCard("Huduma za Kifedha", Icons.abc),
                     ]),
               ),
             ),
