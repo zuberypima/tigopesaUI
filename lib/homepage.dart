@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tigopesaui/utilities/constants.dart';
 import 'package:tigopesaui/widgets/homecard.dart';
 
 class HeomePage extends StatefulWidget {
@@ -14,7 +15,7 @@ class _HeomePageState extends State<HeomePage> {
     return SafeArea(
         child: Scaffold(
           backgroundColor: Color.fromARGB(255, 241, 239, 239),
-      appBar: AppBar(backgroundColor: Color.fromRGBO(31, 59, 144, 100)),
+      appBar: AppBar(backgroundColor:mainColor),
       body: ListView(
         children: [
           Padding(
@@ -28,7 +29,7 @@ class _HeomePageState extends State<HeomePage> {
                   children: [
                     Icon(
                       Icons.account_balance_wallet_outlined,
-                      color: Color.fromRGBO(31, 59, 144, 100),
+                      color: mainColor,
                       size: 40,
                     ),
                     SizedBox(
@@ -37,7 +38,7 @@ class _HeomePageState extends State<HeomePage> {
                     Text(
                       "Angalia Salio",
                       style: TextStyle(
-                          color: Color.fromRGBO(31, 59, 144, 100),
+                          color: mainColor,
                           fontSize: 18),
                     )
                   ],
@@ -58,10 +59,10 @@ class _HeomePageState extends State<HeomePage> {
                       HomeCard().homeCard("Tume Pesa", Icons.send_to_mobile_rounded),
                       HomeCard().homeCard("Kulipia Bili", Icons.payments_outlined),
                       HomeCard().homeCard("Benki", Icons.account_balance_outlined),
-                      HomeCard().homeCard("Kutoa Pesa", Icons.abc),
-                      HomeCard().homeCard("Malipo ya Serikali", Icons.abc),
+                      HomeCard().homeCard("Kutoa Pesa", Icons.category_sharp),
+                      HomeCard().homeCard("Malipo ya Serikali", Icons.pages_outlined),
                       HomeCard().homeCard("Lipa Kwa Simu", Icons.abc),
-                      HomeCard().homeCard("Duka La Tigo", Icons.abc),
+                      HomeCard().homeCard("Duka La Tigo", Icons.shopping_cart_checkout_sharp),
                       HomeCard().homeCard("Lipa Kwa Simu", Icons.abc),
                       HomeCard().homeCard("Lipa Kwa Simu", Icons.abc)
                     ]),
